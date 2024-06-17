@@ -1,3 +1,9 @@
+from typing import Annotated
+
+
+def say_hello(name: Annotated[str, "this is just metadata"]) -> str:
+    print(name.__annotations__())
+    return f"Hello {name}"
 
 def get_full_name(first_name:str, last_name:str):
     full_name=first_name.title()+" "+last_name.title()
@@ -23,3 +29,4 @@ def get_person_name(one_person: Person):
     return one_person.name
 
 print(get_full_name("john","doe"))
+print(say_hello("joker"))
