@@ -11,3 +11,6 @@ async def root():
 async def read_item(item_id):
     return {"item_id": item_id}
 
+@app.get("/files/{file_path:path}")
+async def read_file(file_path: str):
+    return {"file_path": file_path}
