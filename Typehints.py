@@ -2,7 +2,7 @@ from typing import Annotated
 
 
 def say_hello(name: Annotated[str, "this is just metadata"]) -> str:
-    print(name.__annotations__())
+    
     return f"Hello {name}"
 
 def get_full_name(first_name:str, last_name:str):
